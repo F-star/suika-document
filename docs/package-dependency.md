@@ -10,7 +10,7 @@ Suika 项目使用了 monorepo 的方式进行开发，这是为了通过物理�
 
 - `@suika/common`：放一些其他包都可以使用的共享方法；
 - `@suika/geo`：平面几何算法引擎，如判断点是否在多边形内；
-- `@suika/core`：编辑器内核，编辑器核心
+- `@suika/core`：编辑器内核，我们会使用它暴露出来的 SuikaEditor 类，创建编辑器实例。
 
 UI 层使用了 React，相关包为：
 
