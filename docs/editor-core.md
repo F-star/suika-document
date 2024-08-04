@@ -6,6 +6,8 @@ sidebar_position: 4
 
 编辑器内核在 `@suika/core` 包内。
 
+我们需要实例化该包暴露出来的 SuikaEditor 类，得到编辑器实例。
+
 创建 SuikaEditor 对象需要传入的参数：
 
 ```ts

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Suika 项目使用了 monorepo 的方式进行开发，这是为了通过物理隔离的方式，强制对几个模块进行解耦。
 
-内核相关包：
+编辑器内核相关包：
 
 - `@suika/common`：放一些其他包都可以使用的共享方法；
 - `@suika/geo`：平面几何算法引擎，如判断点是否在多边形内；
@@ -14,11 +14,13 @@ Suika 项目使用了 monorepo 的方式进行开发，这是为了通过物理�
 
 UI 层使用了 React，相关包为：
 
-- `@suika/icons`：图标组件库；
-- `@suika/components`：通用组件库，比如图标按钮，目前组件并不多；
+- `@suika/icons`：React 图标组件库；
+- `@suika/components`：React 通用组件库，比如图标按钮，目前组件并不多；
 - `@suika/suika`：编辑器 UI，完整版的图形编辑器
 
-包之间的依赖关系：
+`@suika/suika` 把这些包整合在一起，得到最终的编辑器应用产物。
+
+各包之间的依赖关系：
 
 ![](suika-relation-pkg.png)
 
@@ -29,3 +31,7 @@ UI 层使用了 React，相关包为：
 如果你要使用自己的 UI 框架，比如 Vue。
 
 你需要实现一个类似 `@suika/suika` 的 Vue 项目包，然后引入 `@suika/core` 包。
+
+甚至可以不需要 UI 层。
+
+因为编辑器自身的状态只在编辑器内核中维护，UI 层只是将状态同步然后显示出来而已，所以不用担心剥离 UI 层会导致编辑器内核无法工作。
