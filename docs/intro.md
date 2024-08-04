@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Suika 图形编辑器
 
-[Suika](https://github.com/F-star/suika) 是一款基于 Web 的开源矢量图形编辑器，类似 Figma。
+[Suika](https://github.com/F-star/suika) 是一款 Web 端开源矢量图形编辑器，基于 Canvas 开发。
 
 目前本项目还在持续开发中，功能尚不完全，但基本功能已经具备。
 
